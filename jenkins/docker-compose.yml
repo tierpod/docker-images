@@ -1,0 +1,10 @@
+master:
+  image: jenkins:latest
+  volumes:
+    - ./jenkins_home:/var/jenkins_home
+  links:
+    - slave
+
+slave:
+  image: tehranian/dind-jenkins-slave:latest
+  privileged: true

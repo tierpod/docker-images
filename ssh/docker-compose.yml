@@ -1,0 +1,4 @@
+ssh:
+  build: .
+  environment:
+    - SERVICE_NAME=ssh

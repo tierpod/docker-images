@@ -1,0 +1,15 @@
+registrator:
+  image: gliderlabs/registrator:master
+  links:
+    - node
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock
+  command: -internal consul://node:8500
+
+node:
+  image: progrium/consul:latest
+  ports:
+    - "127.0.0.1:8600:53/udp"
+    - "127.0.0.1:8500:8500"
+    - "127.0.0.1:8400:8400"
+  command: -server -bootstrap
