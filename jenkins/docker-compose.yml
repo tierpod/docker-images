@@ -4,6 +4,8 @@ master:
     - ./jenkins_home:/var/jenkins_home
   links:
     - slave
+  environment:
+    - SERVICE_NAME=jenkins
 
 slave:
   image: tehranian/dind-jenkins-slave:latest
