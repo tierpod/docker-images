@@ -12,9 +12,9 @@
   контейнерах в consul. Нужен именно master из-за наличия в latest
   [бага](https://github.com/gliderlabs/registrator/issues/133)
 
-Дополнительно, файл с конфигом для dnsmasq, чтобы все запросы на service.consul
+Дополнительно, файл с конфигом для dnsmasq, чтобы все dns запросы на service.consul
 перенаправлялись на consul dns: dnsmasq-consul. Для ubuntu 14.04 его достаточно
-скопировать в /etc/NetworManager/ и перезапустить сервис:
+скопировать в /etc/NetworkManager/dnsmasq.d/ и перезапустить сервис:
 
 ```
 service network-manager restart

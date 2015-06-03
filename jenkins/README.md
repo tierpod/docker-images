@@ -2,7 +2,8 @@
 
 ## jenkins
 
-Официальный image для jenkins. Домашняя директория указывает на ./jenkins_home/
+Запускает официальный image для jenkins. Домашняя директория указывает
+на ./jenkins_home/
 
 
 ## jenkins-slave (dind)
