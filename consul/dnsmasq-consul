@@ -1,4 +1,4 @@
-server=/service.consul/127.0.0.1#8600
+server=/.consul/127.0.0.1#8600
 # Do not cache anything
 # A decent dns server will already cache for your local network
 cache-size=0
