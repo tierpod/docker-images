@@ -1,0 +1,13 @@
+registry:
+  hostname: registry2
+  restart: always
+  image: registry:2
+  ports:
+    - 5000:5000
+  environment:
+    REGISTRY_HTTP_TLS_CERTIFICATE: /certs/registry2.crt
+    REGISTRY_HTTP_TLS_KEY: /certs/registry2.key
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+  volumes:
+#    - /srv/registry:/var/lib/registry
+    - ./certs:/certs
