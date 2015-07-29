@@ -36,3 +36,11 @@ $(HOST_CRT): $(HOST_CSR) $(ROOTCA_CRT) $(ROOTCA_KEY)
 
 clean:
 	rm -r $(CERTS_DIR)
+
+DC_VERSION = 1.3.3
+DC_BIN = /usr/local/bin/docker-compose
+UNAME_S = $(shell uname -s)
+UNAME_M = $(shell uname -m)
+docker-compose:
+	curl -L https://github.com/docker/compose/releases/download/$(DC_VERSION)/docker-compose-$(UNAME_S)-$(UNAME_M) > $(DC_BIN) && \
+	chmod +x $(DC_BIN)
