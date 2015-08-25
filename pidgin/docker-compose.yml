@@ -1,0 +1,8 @@
+pidgin:
+  image: thshaw/pidgin
+  name: pidgin
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - purple:/root/.purple
+  environment:
+    - DISPLAY=unix:0.0
