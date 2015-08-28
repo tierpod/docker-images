@@ -1,5 +1,5 @@
 pidgin:
-  image: thshaw/pidgin
+  build: .
   name: pidgin
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
