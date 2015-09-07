@@ -1,0 +1,4 @@
+squidlogparser:
+  build: .
+  volumes:
+    - ./logs:/var/log/squid/
