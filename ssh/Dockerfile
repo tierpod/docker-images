@@ -10,7 +10,7 @@ RUN mkdir -p /var/run/sshd /var/log/supervisor && \
     # create users
     useradd -m -s /bin/bash user && \
     echo 'root:root' | chpasswd && \
-    echo 'user:user' | chpasswd 
+    echo 'user:user' | chpasswd
 
 COPY supervisord.conf /etc/supervisord.conf
 EXPOSE 22
