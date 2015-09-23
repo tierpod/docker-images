@@ -1,0 +1,19 @@
+elasticsearch:
+  image: elasticsearch
+  ports:
+    - 9200:9200
+    - 9300:9300
+
+kibana:
+  image: kibana
+  ports:
+    - 5601:5601
+  links:
+    - elasticsearch:elasticsearch
+
+logstash:
+  image: logstash
+  volumes:
+    - ./logstash.conf.d/:/etc/logstash/conf.d/:ro
+    - ./logs/:/logs/:ro
+  command: logstash -f /etc/logstash/conf.d/squid.conf
