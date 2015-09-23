@@ -1,4 +1,4 @@
-squidlogparser:
+parser:
   build: .
   volumes:
     - ./logs:/var/log/squid/
