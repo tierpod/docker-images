@@ -3,6 +3,6 @@ pidgin:
   name: pidgin
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - purple:/root/.purple
+    - pidgin_home:/root/.purple
   environment:
     - DISPLAY=unix:0.0

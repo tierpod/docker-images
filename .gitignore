@@ -1,5 +1,5 @@
 *.swp
-jenkins_home
+*_home
+*_root
 certs
-purple
 logs
