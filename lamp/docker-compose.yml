@@ -1,0 +1,27 @@
+# https://hub.docker.com/_/php/
+php5:
+  build: .
+  dockerfile: Dockerfile-php5
+  links:
+    - mysql
+    - phpmyadmin
+  volumes:
+    - ./html_root/:/var/www/html/
+  ports:
+    - 8080:80
+
+# https://hub.docker.com/_/mysql/
+mysql:
+  image: mysql:5
+  volumes:
+    - ./mysql_root/:/var/lib/mysql/
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+
+# https://hub.docker.com/r/nazarpc/phpmyadmin/
+phpmyadmin:
+  image: nazarpc/phpmyadmin
+  links:
+    - mysql
+  ports:
+    - 8081:80

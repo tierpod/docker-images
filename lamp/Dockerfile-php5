@@ -1,0 +1,9 @@
+FROM php:5-apache
+MAINTAINER podkorytov_pm <pod.pavel@gmail.com>
+
+RUN apt-get update && \
+    apt-get -y install php5-apcu php5-memcache locales
+
+RUN /usr/sbin/a2enmod rewrite && \
+    locale-gen ru_RU.UTF-8 && \
+    update-locale
