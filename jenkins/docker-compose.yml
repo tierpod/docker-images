@@ -1,7 +1,7 @@
 master:
   image: jenkins:latest
   volumes:
-    - ./jenkins_home:/var/jenkins_home
+    - ./home:/var/jenkins_home
   links:
     - slave
   environment:
