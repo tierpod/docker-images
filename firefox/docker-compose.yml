@@ -1,0 +1,8 @@
+pidgin:
+  build: .
+  name: firefox
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./home:/root/.mozilla
+  environment:
+    - DISPLAY=unix:0.0
