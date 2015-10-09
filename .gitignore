@@ -1,5 +1,5 @@
 *.swp
-*_home
 *_root
+home
 certs
 logs
