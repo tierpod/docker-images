@@ -3,6 +3,6 @@ firefox:
   name: firefox
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - ./home:/root/.mozilla
+    - ./home:/root/.mozilla:z
   environment:
     - DISPLAY=unix:0.0

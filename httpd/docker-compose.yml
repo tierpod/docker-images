@@ -5,3 +5,5 @@ rewrite:
     - rewrite/httpd.conf:/usr/local/apache2/conf/httpd.conf
   environment:
     - SERVICE_NAME=httpd
+  ports:
+    - 8080:80
