@@ -15,7 +15,8 @@ docker-compose up
 
 
 ## Настройка selinux (fedora 23)
+Требуется для запуска xorg-приложений внутри docker-контейнера.
 
 ```
-semodule -i docker-xorg-local.te
+semodule -i docker-xorg-local.pp
 ```
