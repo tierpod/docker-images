@@ -7,7 +7,15 @@ cd project
 docker-compose up
 ```
 
+
 ## Зависимости
 
 * docker
 * docker-compose
+
+
+## Настройка selinux (fedora 23)
+
+```
+semodule -i docker-xorg-local.te
+```

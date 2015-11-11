@@ -1,0 +1,17 @@
+
+module docker-xorg-local 1.0;
+
+require {
+	type user_tmp_t;
+	type xserver_t;
+	type svirt_lxc_net_t;
+	class unix_stream_socket connectto;
+	class sock_file write;
+}
+
+#============= svirt_lxc_net_t ==============
+allow svirt_lxc_net_t user_tmp_t:sock_file write;
+
+#!!!! The file '/tmp/.X11-unix/X0' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /tmp/.X11-unix/X0
+allow svirt_lxc_net_t xserver_t:unix_stream_socket connectto;
