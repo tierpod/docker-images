@@ -1,0 +1,17 @@
+newformat:
+  build: .
+  ports:
+    - 514/udp:514/udp
+  volumes:
+    - ./etc/rsyslog.d:/etc/rsyslog.d:z
+    - ./etc/rsyslog.conf:/etc/rsyslog.conf:z
+    - ./home:/var/log:z
+
+oldformat:
+  build: .
+  ports:
+    - 514/udp:514/udp
+  volumes:
+    - ./etc/rsyslog.d-oldformat:/etc/rsyslog.d:z
+    - ./etc/rsyslog.conf-oldformat:/etc/rsyslog.conf:z
+    - ./home:/var/log:z
