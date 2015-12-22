@@ -1,0 +1,17 @@
+alpine:
+  build: .
+  dockerfile: Dockerfile.alpine
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./home:/root/
+  environment:
+    - DISPLAY=unix:0.0
+
+fedora:
+  build: .
+  dockerfile: Dockerfile.fedora
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./home:/root/
+  environment:
+    - DISPLAY=unix:0.0

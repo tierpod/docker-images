@@ -1,0 +1,8 @@
+FROM fedora:23
+MAINTAINER Podkorytov Pavel <pod.pavel@gmail.com>
+
+RUN dnf install -y xorg-x11-server-Xorg xterm \
+    dejavu-serif-fonts dejavu-sans-fonts dejavu-fonts-common dejavu-sans-mono-fonts  && \
+    dnf clean all
+
+ENTRYPOINT ["xterm"]
