@@ -1,0 +1,8 @@
+FROM ubuntu:trusty
+MAINTAINER Podkorytov Pavel <pod.pavel@gmail.com>
+
+RUN apt-get -y update && \
+    apt-get -y install xterm ttf-dejavu && \
+    apt-get clean
+
+ENTRYPOINT ["xterm"]
