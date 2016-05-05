@@ -3,7 +3,7 @@ alpine:
   dockerfile: Dockerfile.alpine
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - ./home:/root/
+    - ./docker-home:/root/
   environment:
     - DISPLAY=unix:0.0
 
@@ -12,6 +12,15 @@ fedora:
   dockerfile: Dockerfile.fedora
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - ./home:/root/
+    - ./docker-home:/root/
+  environment:
+    - DISPLAY=unix:0.0
+
+ubuntu:
+  build: .
+  dockerfile: Dockerfile.ubuntu
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./docker-home:/root/
   environment:
     - DISPLAY=unix:0.0

@@ -1,7 +1,8 @@
 FROM alpine
 MAINTAINER Podkorytov Pavel <pod.pavel@gmail.com>
 
-RUN apk update && \
+RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+    apk update && \
     apk add xterm ttf-ubuntu-font-family && \
     rm -rf /var/cache/apk/*
 
