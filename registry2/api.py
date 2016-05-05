@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import json
 import requests
+import textwrap
 
 DEFAULT_SRV = 'localhost:5000'
 
@@ -22,10 +22,15 @@ if __name__ == '__main__':
 
     catalog = requests.get("{0}/_catalog".format(URL), verify=False).json()['repositories']
 
-    print "Found images for registry: {0}".format(URL)
-    print "{0}\n".format(' '.join(catalog))
+    wrapper = textwrap.TextWrapper(initial_indent='  ', subsequent_indent='  ',
+                                   break_on_hyphens=False)
+
+    print "Found images for registry: {0} (total: {1})".format(URL, len(catalog))
+    print wrapper.fill(' '.join(catalog))
+    print ""
 
     for c in catalog:
         tags = requests.get("{0}/{1}/tags/list".format(URL, c), verify=False).json()['tags']
-        print "Tags for image: {0}".format(c)
-        print "{0}\n".format(' '.join(tags))
+        print "Tags for image: {0} (total: {1})".format(c, len(tags))
+        print wrapper.fill(' '.join(tags))
+        print ""
