@@ -3,12 +3,12 @@
 ## jenkins
 
 Запускает официальный image для jenkins. Домашняя директория указывает
-на ./jenkins_home/
+на ./docker-home/
 
 
 ## jenkins-slave (dind)
 
-Docker-in-docker, позволяет запустить slave с docker-ом внутри. Его можно 
+Docker-in-docker, позволяет запустить slave с docker-ом внутри. Его можно
 прописать сборщиком в jenkins с параметрами:
 
 * hostname: jenkins_slave_1

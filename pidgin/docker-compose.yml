@@ -3,6 +3,6 @@ pidgin:
   name: pidgin
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - ./home:/root/.purple
+    - ./docker-home:/root/
   environment:
     - DISPLAY=unix:0.0

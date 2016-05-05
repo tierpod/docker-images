@@ -5,7 +5,7 @@ newformat:
   volumes:
     - ./etc/rsyslog.d:/etc/rsyslog.d:z
     - ./etc/rsyslog.conf:/etc/rsyslog.conf:z
-    - ./home:/var/log:z
+    - ./docker-home:/var/log:z
 
 oldformat:
   build: .
@@ -14,4 +14,4 @@ oldformat:
   volumes:
     - ./etc/rsyslog.d-oldformat:/etc/rsyslog.d:z
     - ./etc/rsyslog.conf-oldformat:/etc/rsyslog.conf:z
-    - ./home:/var/log:z
+    - ./docker-home:/var/log:z

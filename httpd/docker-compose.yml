@@ -1,8 +1,8 @@
 rewrite:
   image: httpd:latest
   volumes:
-    - rewrite/public_html/:/usr/local/apache2/htdocs/
-    - rewrite/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    - ./rewrite/public_html/:/usr/local/apache2/htdocs/
+    - ./rewrite/httpd.conf:/usr/local/apache2/conf/httpd.conf
   environment:
     - SERVICE_NAME=httpd
   ports:

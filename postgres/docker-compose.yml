@@ -2,7 +2,7 @@ postgres:
   image: postgres
   name: postgres
   volumes:
-    - ./home:/var/lib/postgresql/data
+    - ./docker-home:/var/lib/postgresql/data
   environment:
     - POSTGRES_PASSWORD=PostgresPassw0rd
   ports:
