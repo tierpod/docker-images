@@ -1,6 +1,6 @@
 *.swp
 *_root
-home
+docker-home
 certs
 logs
 *.local
