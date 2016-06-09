@@ -1,4 +1,4 @@
 ssh:
   build: .
   environment:
-    - SERVICE_NAME=ssh_tiny
+    - SERVICE_NAME=ssh_tini

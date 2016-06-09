@@ -1,9 +1,10 @@
 # ssh
 
-Контейнер c supervisord+sshd внутри. Добавлено 2 пользователя:
+centos7+supervisord+sshd
 
-* root, пароль root
-* user, пароль user
+Added 2 users:
 
-SERVICE_NAME=ssh в docker-compose.yml указывает сервис, к которому
-привяжется этот контейнер в consul.
+* root, password root
+* user, password user
+
+SERVICE_NAME=ssh environment variable for consul.

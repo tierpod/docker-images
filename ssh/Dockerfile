@@ -3,7 +3,8 @@ MAINTAINER Pavel Podkorytov <pod.pavel@gmail.com>
 
 # supervisord + sshd
 RUN yum install -y epel-release
-RUN yum install -y supervisor openssh-server
+RUN yum install -y supervisor openssh-server && \
+    yum clean all
 RUN mkdir -p /var/run/sshd /var/log/supervisor && \
     # create host keys
     ssh-keygen -A && \
