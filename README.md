@@ -14,9 +14,18 @@ docker-compose up
 * docker-compose
 
 
-## Настройка selinux (fedora 23)
-Требуется для запуска xorg-приложений внутри docker-контейнера.
+## x11apps containers
 
+Требуется настройка xhost:
+
+```
+SI:localuser:root
+```
+
+
+## Настройка selinux
+
+Требуется для запуска xorg-приложений внутри docker-контейнера:
 ```
 semodule -i docker-xorg-local.pp
 ```
