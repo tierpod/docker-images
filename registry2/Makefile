@@ -6,7 +6,7 @@ ROOTCA_CRT = $(CERTS_DIR)/rootCA.crt
 HOST_KEY = $(CERTS_DIR)/$(HOST).key
 HOST_CSR = $(CERTS_DIR)/$(HOST).csr
 HOST_CRT = $(CERTS_DIR)/$(HOST).crt
-SUBJ = /C=RU/OU=IT/CN=$(HOST)
+SUBJ = /C=RU/L=Location/O=Organization/OU=IT/CN=$(HOST)
 
 .PHONY: all clean rootca host
 
